@@ -1,0 +1,21 @@
+python distribute_asyn.py \
+--job_name='ps' \
+--task_id=0 \
+--ps_hosts='localhost:2222' \
+--worker_hosts='localhost:2223,localhost:1111'
+
+
+
+python distribute_asyn.py \
+--job_name='worker' \
+--task_id=0 \
+--ps_hosts='localhost:2222' \
+--worker_hosts='localhost:2223,localhost:1111'
+
+
+
+python distribute_asyn.py \
+--job_name='worker' \
+--task_id=1 \
+--ps_hosts='localhost:2222' \
+--worker_hosts='localhost:2223,localhost:1111'
